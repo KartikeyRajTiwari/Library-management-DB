@@ -1,0 +1,66 @@
+2. Data types and its description
+1. Integer: one optional sign character (+ or -) followed by at least one digit
+(0-9). Leading and trailing blanks are ignored. No other character is
+allowed.
+2. Varchar: It is used to store alpha numeric characters. In this data type
+we can set the maximum number of characters up to 8000 ranges by
+defaults SQL server will set the size to 50 characters range.
+3. Date: The DATE data type accepts date values. No parameters are
+required when declaring a DATE data type. Date values should be
+specified in the form: YYYY-MM-DD. However, Point Base will also
+accept single digits entries for month and day values.
+4. Time: The TIME data type accepts time values. No parameters are
+required when declaring a TIME data type. Date values should be
+specified in the form: HH:MM: SS. An optional fractional value can be
+used to represent nanoseconds.
+3. Data Requirements
+Entities
+ BRANCH
+ EMPLOYEE
+ CUSTOMER
+ ISSUE STATUS
+ RETURN STATUS
+ BOOKS
+Attributes
+ BRANCH
+ Manager_id
+ Branch_id
+ Address
+ Contact_no
+ Branch_h_no
+ Street
+ City
+ State
+ Zipcode
+ CUSTOMER
+ Customer_id
+ Books_issued
+ Name
+ Address
+ Registration_date
+ ISSUE STATUS
+ Issue_book_name
+ Issue_id
+ Issue_date
+ ISBN
+ Customer_id
+ RETURN STATUS
+ Return_id
+ Return_date
+ Customer_id
+ Return_book_name
+ ISBN
+ BOOKS
+ ISBN
+ Title
+ Category
+ Rental_price
+ Author
+ Publisher
+ Status
+RELATIONSHIPS - CARDINALITY
+ MANAGER manages the BRANCH (1 - N)
+ CUSTOMER registers in the respective BRANCH (N – 1)
+ CUSTOMER issues BOOKS (1 – N)
+ CUSTOMER returns BOOKS (1-N)
+ EMPLOYEE updates BOOKS (N – N)
